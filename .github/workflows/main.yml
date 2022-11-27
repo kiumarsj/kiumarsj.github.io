@@ -1,4 +1,4 @@
-name: github pages
+name: hugo build to docs
 on:
   push:
     branches:
