@@ -2,6 +2,7 @@ baseURL = 'http://kiumars.tk/'
 languageCode = 'en-us'
 title = 'Kiumars Javan'
 theme = 'hugo-theme-shell'
+publishDir = 'docs'
 
 [Params]
   # Note: This is for the meta description, which is different from the "description" displayed in the terminal.
