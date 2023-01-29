@@ -13,6 +13,13 @@ jobs:
           submodules: false  # Fetch Hugo themes (true OR recursive)
           fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
 
+      - name: Copy To Branches Action
+        uses: planetoftheweb/copy-to-branches@v1.2
+        env:
+          key: main
+          branches: gh-page
+          files: favicon.png
+
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
         with:
