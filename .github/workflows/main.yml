@@ -34,7 +34,7 @@ jobs:
         uses: planetoftheweb/copy-to-branches@v1.2
         env:
           key: main
-          branches: gh-page
+          branches: gh-pages
           files: favicon.png
           
       # - name: CopyFavicon
