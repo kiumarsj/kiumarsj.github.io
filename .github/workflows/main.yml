@@ -30,3 +30,17 @@ jobs:
           github_token: ${{ secrets.HUGO_BUILD }}
           publish_dir: ./docs
           cname: kiumars.tk
+      - name: copy favicon
+        uses: actions/checkout@v3
+        env:
+          SRC_FOLDER_PATH: 'main'
+          TARGET_BRANCH: 'gh-pages'
+        run: |
+        git config --global user.name 'GitHub Action'
+        git config --global user.email 'action@github.com'
+        git fetch                         # fetch branches
+        git checkout $TARGET_BRANCH       # checkout to your branch
+        git checkout ${GITHUB_REF##*/} -- favicon.png # copy files from the source branch
+        git add -A
+        git diff-index --quiet HEAD ||  git commit -am "deploy favicon"  # commit to the repository (ignore if no modification)
+        git push origin $TARGET_BRANCH # push to remote branch
