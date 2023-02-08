@@ -1,0 +1,36 @@
+version: '3.3'
+
+services:
+        node-exporter:
+                image: prom/node-exporter
+                restart: always
+                ports:
+                        - 9100:9100
+                volumes:
+                        - /proc:/host/proc
+                        - /sys:/host/sys:ro
+                        - /:/rootfs:ro
+                command:
+                        - '--path.rootfs=/rootfs'
+                        - '--path.procfs=/host/proc'
+                        - '--path.sysfs=/host/sys'
+                        - '--collector.systemd'
+        nginx-exporter:
+                image: nginx/nginx-prometheus-exporter
+                restart: always
+                ports:
+                  - 9113:9113
+                command:
+                  - '-nginx.scrape-uri=http://<nginx_server_ip>:80/stub_status'
+                  - '.web.telemetry-path=/stub_status'
+        mysql-exporter:
+                image: prom/mysqld-exporter
+                restart: always
+                ports:
+                  - 9104:9104
+                volumes:
+                  - mysqld-exporter:/etc/
+                environment:
+                  - DATA_SOURCE_NAME="exporter:@(3.125.139.43:3306)/"
+volumes:
+        mysqld-exporter:

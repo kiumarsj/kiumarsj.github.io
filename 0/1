@@ -1,0 +1,21 @@
+sudo apt install ansible
+
+
+ansible-galaxy install mrlesmithjr.mariadb_galera_cluster
+
+ansible-playbook -i inventory playbook.yml
+
+inventory:
+[galera-cluster-nodes]
+galera1
+galera2
+galera3
+
+playbook.yml:
+---
+- name: Example Playbook
+  hosts: all
+  tasks:
+    - name: Include ansible-mariadb-galera-cluster
+      include_role:
+        name: mrlesmithjr.mariadb_galera_cluster
