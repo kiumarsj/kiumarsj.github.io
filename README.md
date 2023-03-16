@@ -1,4 +1,4 @@
-[![hugo build to gh-pages](https://github.com/kiumarsj/kiumarsj.github.io/actions/workflows/main.yml/badge.svg)](https://github.com/kiumarsj/kiumarsj.github.io/actions/workflows/main.yml)
+[![hugo build to gh-pages](https://github.com/kiumarsj/kiumarsj.github.io/actions/workflows/hugo-build-deploy.yml/badge.svg)](https://github.com/kiumarsj/kiumarsj.github.io/actions/workflows/hugo-build-deploy.yml)
 
 [![pages-build-deployment](https://github.com/kiumarsj/kiumarsj.github.io/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/kiumarsj/kiumarsj.github.io/actions/workflows/pages/pages-build-deployment)
 
