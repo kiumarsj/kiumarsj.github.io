@@ -1,3 +1,7 @@
+[![hugo build to gh-pages](https://github.com/kiumarsj/kiumarsj.github.io/actions/workflows/main.yml/badge.svg)](https://github.com/kiumarsj/kiumarsj.github.io/actions/workflows/main.yml)
+
+[![pages-build-deployment](https://github.com/kiumarsj/kiumarsj.github.io/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/kiumarsj/kiumarsj.github.io/actions/workflows/pages/pages-build-deployment)
+
 # My personal Website
 
 I'm using my custom domain for this github page and the address is: https://kiumars.tk
