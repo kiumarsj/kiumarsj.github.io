@@ -1,4 +1,4 @@
-baseURL = 'http://kiumars.tk/'
+baseURL = 'http://kiumarsj.ir/'
 languageCode = 'en-us'
 title = 'Kiumars Javan'
 theme = 'hugo-theme-shell'
@@ -26,7 +26,7 @@ publishDir = 'docs'
   # ...
   # Note: result of the tree command
   userName = "me"
-  pcName = "kiumars.tk"
+  pcName = "kiumarsj.ir"
   workDir = "myinfo"
   profile = "profile.txt"
 
@@ -63,7 +63,6 @@ publishDir = 'docs'
     - Linux
     - Android Development
     I'm a Linux lover ❤
-    and a Real Geek :) 
   """
 
   # Note: If you want to use a Markdown file, you can use the following
@@ -78,7 +77,7 @@ publishDir = 'docs'
     ["Github", "https://github.com/kiumarsj"],
     ["Linkedin", "https://www.linkedin.com/in/kiumarsj/"],
     ["StackOverflow", "https://stackoverflow.com/users/12769542/kiumars-javan"],
-    ["My Blog", "https://blog.kiumars.tk/"],
+    ["Email", "mailto:me@kiumarsj.ir"],
     ["Contact Me", "/post/contact.md"],
     ["Fingerprint", "/post/fingerprint.md"],
   ]
