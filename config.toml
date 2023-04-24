@@ -77,7 +77,6 @@ publishDir = 'docs'
     ["Github", "https://github.com/kiumarsj"],
     ["Linkedin", "https://www.linkedin.com/in/kiumarsj/"],
     ["StackOverflow", "https://stackoverflow.com/users/12769542/kiumars-javan"],
-    ["Email", "mailto:me@kiumarsj.ir"],
     ["Contact Me", "/post/contact.md"],
     ["Fingerprint", "/post/fingerprint.md"],
   ]

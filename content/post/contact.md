@@ -4,6 +4,6 @@ date: 2022-11-27T19:20:08+03:30
 draft: flase
 ---
 
-- email: me@kiumars.tk
+- email: <link href="mailto:me@kiumarsj.ir">me@kiumarsj.ir</link>
 
-- Tel: +98 915 173 3784
+- Skype id: kiumars.javan
