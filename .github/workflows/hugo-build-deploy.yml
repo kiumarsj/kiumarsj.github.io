@@ -52,7 +52,7 @@ jobs:
         with:
           github_token: ${{ secrets.HUGO_BUILD }}
           publish_dir: ./docs
-          cname: kiumarsj.ir
+          cname: www.kiumarsj.ir
       
       - name: Copy To Branches Action
         uses: planetoftheweb/copy-to-branches@v1.2
