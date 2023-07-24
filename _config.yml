@@ -1,0 +1,51 @@
+# this is only for search engines, it does not appear in the home
+# as long as the json variables name and description are provided
+title: Kiumars Javan
+description: Kiumars Javan's Website!
+baseurl: ""
+url: https://kiumarsj.ir
+
+# this information is shown on the homepage, all fields are optional and
+# can be declared either as a single string or as a string array/hash
+json:
+  name: Kiumars Javan
+  description:
+    - Hi I am Kiumars Javan!
+    - Master Student majoring in Computer Engineering
+    - minoring in Computer Networks.
+    - I'm a Linux lover ❤
+    - My main interests are
+    - DevOps
+    - Cloud Computing
+    - Computer Networks
+    - Mobile App Development
+  cv: Contact for CV
+  public_key: assets/public_key
+  address:
+    - Planet Earth
+    - Department of Geeks
+    - No. 2043
+  contact:
+    # office: Foobar Hall 1.23
+    # phone: +1 234 567 890
+    email: contact@kiumarsj.ir
+  profiles:
+    github: https://github.com/kiumarsj
+    linkedin: https://www.linkedin.com/in/kiumarsj
+    twitter: https://twitter.com/sirqodealot
+    stackoverflow: https://stackoverflow.com/users/12769542/kiumars-javan
+
+exclude:
+  - LICENSE
+  - README.md
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+whitelist:
+  - jekyll-sitemap
+
+sass:
+  sass_dir: _sass
+  sourcemap: never
