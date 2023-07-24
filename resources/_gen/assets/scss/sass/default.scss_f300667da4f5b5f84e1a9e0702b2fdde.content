@@ -34,7 +34,7 @@ body {
   border-radius: 10px;
   box-shadow: 0 0 0 1px white; }
 
-.cursor, #cd:after, #whoami:after, #cat:after, #tree:after {
+.cursor, #ps1_01:after, #cd:after, #ps1_02:after, #cat:after, #std_out_01:after, #ps1_03:after, #std_out_02:after, #ps1_04:after {
   visibility: var(--cursor-visibility);
   content: "|";
   overflow: hidden;

@@ -6,24 +6,14 @@ title = "Shell"
 ignoreErrors = ["error-remote-getjson"]
 
 [Params]
-
-# Additions start here
-  [Params.Navbar]
-  use = true
-  
-  [Params.Extensions]
-  use = true
-  ext = ".txt" # extension to add after single page
-# Additions stop here
-    
   # Note: This is for the meta description, which is different from the "description" displayed in the terminal.
   description = "Jane Doe's Portfolio!"
   [Params.Terminal]
-  # Note: color scheme
+  # Note: color schema
   # Note: You can choose between
-  # Note: hugo-theme-shell original: ["shell-powershell", "shell-ubuntu", "shell-retro"]
-  # Note: gogh theme: https://mayccoll.github.io/Gogh/
-  scheme = "Molokai"
+  # Note: ["monokai", "powershell", "gruvbox_light", "gruvbox_dark", "solarized_light", "solarized_dark", "ubuntu", "retro"]
+  # Note: If you want to use the Goph theme, set it to "goph" (See README.md)
+  schema = "monokai"
 
   # Note: in terminal
   # [userName]@[pcName]:~/$ cd [workDir]

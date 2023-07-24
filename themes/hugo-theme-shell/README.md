@@ -3,36 +3,35 @@ Terminal-like theme with selectable color schemes.
 
 ![Screenshot](https://raw.githubusercontent.com/Yukuro/hugo-theme-shell/master/images/motion2.gif)
 
-## Quick Depoy
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/Yukuro/hugo-theme-shell-example)  
+## Demo site
+- https://hugo-theme-shell.netlify.app/
 
 ## Features
 - Terminal-like portfolio
-- Selectable color schemes
-  - [Mayccoll/Gogh](https://github.com/Mayccoll/Gogh) theme
-    - `Molokai`  
-    ![Molokai](https://raw.githubusercontent.com/Yukuro/hugo-theme-shell/master/images/v0.1.6/Molokai.png)
+    - Selectable color schemes
+        - `monokai`
+        ![monokai](https://raw.githubusercontent.com/Yukuro/hugo-theme-shell/master/images/monokai.png)
 
-    - `Dracula`  
-    ![Dracula](https://raw.githubusercontent.com/Yukuro/hugo-theme-shell/master/images/v0.1.6/Dracula.png)
+        - `powershell`
+        ![powershell](https://raw.githubusercontent.com/Yukuro/hugo-theme-shell/master/images/powershell.png)
 
-    - `Gruvbox`  
-    ![Gruvbox](https://raw.githubusercontent.com/Yukuro/hugo-theme-shell/master/images/v0.1.6/Gruvbox.png)
+        - `gruvbox_light`
+        ![gruvbox_light](https://raw.githubusercontent.com/Yukuro/hugo-theme-shell/master/images/gruvbox_light.png)
 
-    - `Material`  
-    ![Material](https://raw.githubusercontent.com/Yukuro/hugo-theme-shell/master/images/v0.1.6/Material.png)
+        - `gruvbox_dark`
+        ![gruvbox_dark](https://raw.githubusercontent.com/Yukuro/hugo-theme-shell/master/images/gruvbox_dark.png)
 
-    - `Tender`  
-    ![Tender](https://raw.githubusercontent.com/Yukuro/hugo-theme-shell/master/images/v0.1.6/Tender.png)
-  - hugo-shell-theme ~v0.1.5 theme
-    - `shell-powershell`  
-    ![shell-powershell](https://raw.githubusercontent.com/Yukuro/hugo-theme-shell/master/images/v0.1.6/shell-powershell.png)
+        - `solarized_light`
+        ![solarized_light](https://raw.githubusercontent.com/Yukuro/hugo-theme-shell/master/images/solarized_light.png)
 
-    - `shell-ubuntu`  
-    ![shell-ubuntu](https://raw.githubusercontent.com/Yukuro/hugo-theme-shell/master/images/v0.1.6/shell-ubuntu.png)
+        - `solarized_dark`
+        ![solarized_dark](https://raw.githubusercontent.com/Yukuro/hugo-theme-shell/master/images/solarized_dark.png)
 
-    - `shell-retro`  
-    ![shell-retro](https://raw.githubusercontent.com/Yukuro/hugo-theme-shell/master/images/v0.1.6/shell-retro.png)
+        - `ubuntu`
+        ![ubuntu](https://raw.githubusercontent.com/Yukuro/hugo-theme-shell/master/images/ubuntu.png)
+
+        - `retro`
+        ![retro](https://raw.githubusercontent.com/Yukuro/hugo-theme-shell/master/images/retro.png)
         
 - Minimal design
 - Responsive
@@ -59,27 +58,19 @@ git submodule add https://github.com/Yukuro/hugo-theme-shell.git themes/hugo-the
 hugo server -t hugo-theme-shell -w -D
 ```
 
-#### Note: How to use stable version
-After running `git submodule add`, do the following
-```bash
-cd themes/hugo-theme-shell
-git checkout TAG_FOR_STABLE_VERSION
-```
-`TAG_FOR_STABLE_VERSION` : The stable version tag can be found on the [release page of my repository](https://github.com/Yukuro/hugo-theme-shell/releases) (i.e. `v0.1.5`, `v0.1.4` ...etc).
-
-### How to use theme
-hugo-theme-shell supports the [Mayccoll/Gogh](https://github.com/Mayccoll/Gogh) theme
+### How to use Goph theme
+hugo-theme-shell supports the [Goph](https://github.com/Mayccoll/Gogh) theme by using [goph-to-stylesheet](https://github.com/Yukuro/goph-to-stylesheet)
 1. Choose a Goph theme : you can choose a theme [here](https://mayccoll.github.io/Gogh/).
-2. Copy the name of the theme you selected
-3. Configure your config.toml as follows
-  ```toml
-  [Params.Terminal]
-  scheme = "THEME_NAME"
-  ```
-
-#### Note
-Most of the themes used in hugo v0.1.5 and earlier have been deprecated with the introduction of Mayccoll/Gogh theme.  
-See [here](https://github.com/Yukuro/hugo-theme-shell/blob/master/docs/shell_to_gogh.md) for details.  
+2. Use goph-to-stylesheet to convert to scss file
+```bash
+goph-to-stylesheet -t THEME_YOU_CHOSE -i template/shell.scss -o goph.scss
+```
+3. Copy goph.scss to `assets/sass/goph.scss`
+4. Configure your config.toml as follows
+```toml
+[Params.Terminal]
+schema = "goph"
+```
 
 ## Configuration
 in [config.toml](config/_default/config.toml)
@@ -88,12 +79,11 @@ in [config.toml](config/_default/config.toml)
   # Note: This is for the meta description, which is different from the "description" displayed in the terminal.
   description = "Jane Doe's Portfolio!"
   [Params.Terminal]
-  # Note: color scheme
+  # Note: color schema
   # Note: You can choose between
-  # Note: hugo-theme-shell original: ["shell-powershell", "shell-ubuntu", "shell-retro"]
-  # Note: or
-  # Note: gogh theme: https://mayccoll.github.io/Gogh/
-  scheme = "Molokai"
+  # Note: ["monokai", "powershell", "gruvbox_light", "gruvbox_dark", "solarized_light", "solarized_dark", "ubuntu", "retro"]
+  # Note: If you want to use the Goph theme, set it to "goph" (See README.md)
+  schema = "monokai"
 
   # Note: in terminal
   # [userName]@[pcName]:~/$ cd [workDir]
