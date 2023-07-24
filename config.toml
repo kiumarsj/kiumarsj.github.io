@@ -1,0 +1,84 @@
+baseURL = 'http://kiumars.tk/'
+languageCode = 'en-us'
+title = 'Kiumars Javan'
+theme = 'hugo-theme-shell'
+publishDir = 'docs'
+
+[Params]
+  # Note: This is for the meta description, which is different from the "description" displayed in the terminal.
+  description = "Kiumars Javan's Website!"
+  [Params.Terminal]
+  # Note: color schema
+  # Note: You can choose between
+  # Note: ["monokai", "powershell", "gruvbox_light", "gruvbox_dark", "solarized_light", "solarized_dark", "ubuntu", "retro"]
+  # Note: If you want to use the Goph theme, set it to "goph" (See README.md)
+  schema = "monokai"
+
+  # Note: in terminal
+  # [userName]@[pcName]:~/$ cd [workDir]
+  # [userName]@[pcName]:~/[workDir]$ cat [profile]
+  #
+  # [description]
+  #
+  # Note: if you set Params.Tree > use = true
+  # [userName]@[pcName]:~/[workDir]$ tree ./[folderName]/
+  # ./[folderName]/
+  # ...
+  # Note: result of the tree command
+  userName = "me"
+  pcName = "kiumars.tk"
+  workDir = "myinfo"
+  profile = "profile.txt"
+
+  # Note: speed at which text is displayed on the terminal
+  # Note: if set to 0, typing animation will be disabled
+  # Note:
+  # Note: if you want to enable Mathjax, you need to set it to 0
+  # Note: and set "math: true" at front matter in your Markdown file
+  ps1Delay = 0 # prompt speed : [userName]@[pcName]:~/$ , [userName]@[pcName]:~/[workDir]$
+  stdoutDelay = 0 # stdout speed : [description] , files in Params.Tree
+  commandDelay = 50 # command speed : cd [workDir] , cat [profile] , tree ./[folderName]/
+
+  # terminalDelay = 20 : deprecated
+
+  # Note: speed at which text is displayed on the activity pages
+  # Note: if set to 0, typing animation will be disabled
+  # Note: 
+  # Note: if you want to enable Mathjax, you need to set it to 0
+  # Note: and set "math: true" at front matter in your Markdown file
+  titleDelay = 0 # title speed : "title" in front matter
+  contentDelay = 0 # content speed : content in .md file
+
+  # activityDelay = 5 : deprecated
+
+  description = """
+    Hi I am Kiumars Javan!
+    Master Student majoring in Computer Engineering
+    and minoring in Computer Networks
+
+    My main interests are:
+    - DevOps
+    - Cloud Computing
+    - Computer Networks
+    - Linux
+    - Android Development
+    I'm a Linux lover ❤
+    and a Real Geek :) 
+  """
+
+  # Note: If you want to use a Markdown file, you can use the following
+  # description = "/description.md"
+  # Note: and put the description.md in /content/description.md
+
+  [Params.Tree]
+  use = true
+  folderName = "links"
+  # Note: ["ACTIVITY", "URL or PATH TO YOUR MARKDOWN FILE"]
+  files = [ 
+    ["Github", "https://github.com/kiumarsj"],
+    ["Linkedin", "https://www.linkedin.com/in/kiumarsj/"],
+    ["StackOverflow", "https://stackoverflow.com/users/12769542/kiumars-javan"],
+    ["My Blog", "https://blog.kiumars.tk/"],
+    ["Contact Me", "/posts/contact.md"],
+    ["Fingerprint", "/posts/fingerprint.md"],
+  ]
