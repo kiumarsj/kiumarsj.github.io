@@ -1,7 +1,0 @@
----
-title: "Fingerprint"
-date: 2022-11-27T19:17:36+03:30
-draft: false
----
-
-608513E6373F0CFDA241A66C3F66F040591C9127
