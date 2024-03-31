@@ -32,8 +32,8 @@ json:
   profiles:
     github: https://github.com/kiumarsj
     linkedin: https://www.linkedin.com/in/kiumarsj
-    twitter: https://twitter.com/sirqodealot
-    stackoverflow: https://stackoverflow.com/users/12769542/kiumars-javan
+    # twitter: https://twitter.com/sirqodealot
+    # stackoverflow: https://stackoverflow.com/users/12769542/kiumars-javan
 
 exclude:
   - LICENSE
